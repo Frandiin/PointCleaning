@@ -5,18 +5,18 @@ export const NotFound = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-screen bg-[#3694bf] text-[#dcdcdc]">
+      <div className="flex flex-col items-center justify-center h-screen bg-[#1479bc] text-[#dcdcdc]">
         <span className="text-[100px]">404</span>
 
         <h1 className="text-[50px] text-[#dcdcdc] text-center mb-5">
-          Ops! Página não encontrada.
+          Oops! Page not found.
         </h1>
 
-        <p>Tem certeza de que era isso que você estava procurando?</p>
+        <p>Are you sure this is what you were looking for?</p>
 
         <p>
-          Aguarde uns instantes e recarregue a página, ou volte para a página
-          inicial.
+          Please wait a few moments and reload the page, or return to the page
+          initial.
         </p>
 
         <div className="my-5">

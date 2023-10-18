@@ -53,7 +53,7 @@ export const Home = () => {
             <div>
               <div className="rounded-md md:relative shadow-lg border-2">
                 <img src="./deep-cleaning.png" width={400} />
-                <div className="text-sm  rounded-full text-center bottom-0 w-full p-1 md:absolute text-[#1479bc] md:text-white relative md:mb-20 uppercase font-bold">
+                <div className="text-sm  text-center bottom-0 w-full p-1 md:absolute text-[#1479bc] md:text-white  md:mb-20 uppercase font-bold py-3 md:bg-[#00000050]">
                   <p>Deep Cleaning</p>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export const Home = () => {
             <div>
               <div className="rounded-md md:relative shadow-lg border-2">
                 <img src="./surface-cleaning.png" width={400} />
-                <div className="text-sm rounded-full text-center bottom-0 w-full p-1 md:absolute text-[#1479bc]  md:text-white relative md:mb-16 uppercase font-bold">
+                <div className="text-sm text-center bottom-0 w-full p-1 md:absolute text-[#1479bc]  md:text-white  md:mb-16 uppercase font-bold py-3 md:bg-[#00000050]">
                   <p>Superficial Cleaning</p>
                 </div>
               </div>
@@ -69,7 +69,7 @@ export const Home = () => {
             <div>
               <div className="rounded-md md:relative shadow-lg border-2">
                 <img src="./airbnb-cleaning.png" width={400} />
-                <div className="text-sm rounded-full text-center bottom-0 w-full p-1 md:absolute text-[#1479bc]  md:text-white relative md:mb-20 uppercase font-bold">
+                <div className="text-sm text-center bottom-0 w-full p-1 md:absolute text-[#1479bc]  md:text-white  md:mb-20 uppercase font-bold py-3 md:bg-[#00000050]">
                   <p>Airbnb cleaning</p>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export const Home = () => {
             <div>
               <div className="rounded-md md:relative shadow-lg border-2">
                 <img src="./office-cleaning.png" width={400} />
-                <div className="text-sm rounded-full text-center bottom-0 w-full p-1 md:absolute text-[#1479bc] md:text-white relative md:mb-20 uppercase font-bold">
+                <div className="text-sm text-center bottom-0 w-full p-1 md:absolute text-[#1479bc] md:text-white  md:mb-20 uppercase font-bold py-3 md:bg-[#00000050]">
                   <p>Office Cleaning</p>
                 </div>
               </div>
@@ -85,7 +85,7 @@ export const Home = () => {
             <div>
               <div className="rounded-md md:relative shadow-lg border-2">
                 <img src="./residential-cleaning.png" width={400} />
-                <div className="text-sm rounded-full text-center bottom-0 w-full p-1 md:absolute font-bold text-[#1479bc] md:text-white relative md:mb-16 uppercase">
+                <div className="text-sm text-center bottom-0 w-full p-1 md:absolute font-bold text-[#1479bc] md:text-white  md:mb-16 uppercase py-3 md:bg-[#00000050]">
                   <p>Residential Cleaning</p>
                 </div>
               </div>
@@ -93,7 +93,7 @@ export const Home = () => {
             <div>
               <div className="rounded-md md:relative shadow-lg border-2">
                 <img src="./house-cleaning-season.png" width={400} />
-                <div className="text-sm rounded-full text-center bottom-0 w-full p-1 md:absolute object-cover text-[#1479bc] md:text-white relative md:mb-20 uppercase font-bold">
+                <div className="text-sm text-center bottom-0 w-full p-1 md:absolute object-cover text-[#1479bc] md:text-white  md:mb-16 uppercase font-bold py-3 md:bg-[#00000050]">
                   <p>Entry/Exit Cleaning</p>
                 </div>
               </div>

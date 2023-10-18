@@ -22,7 +22,7 @@ export const Footer = () => {
   };
   return (
     <div>
-      <footer className="mt-10 md:grid md:grid-cols-3 text-center bg-[#1479bc] gap-3 p-3">
+      <footer className="mt-10 md:grid md:grid-cols-3 text-center bg-[#1479bc] gap-3 p-3 pb-20">
         <div className="flex flex-col gap-4 text-white items-start mx-2 p-4 mt-6">
           <a href="https://www.instagram.com/point.cleaning/" target="_blank">
             <InstagramIcon sx={{ color: "white" }} />

@@ -8,7 +8,7 @@ export const Services = () => {
             src="./deep-cleaning.png"
             width={400}
             height={100}
-            className="rounded-full border-blue-600 border-4"
+            className="shadow-lg rounded-md"
           />
         </div>
         <div>
@@ -38,7 +38,7 @@ export const Services = () => {
             src="./surface-cleaning.png"
             width={400}
             height={100}
-            className="rounded-full border-blue-600 border-4"
+            className="shadow-lg rounded-md"
           />
         </div>
       </div>
@@ -48,7 +48,7 @@ export const Services = () => {
             src="./house-cleaning-season.png"
             width={400}
             height={100}
-            className="rounded-full border-blue-600 border-4"
+            className="shadow-lg rounded-md"
           />
         </div>
         <div>
@@ -77,7 +77,7 @@ export const Services = () => {
             src="./airbnb-cleaning.png"
             width={400}
             height={100}
-            className="rounded-full border-blue-600 border-4"
+            className="shadow-lg rounded-md"
           />
         </div>
       </div>
@@ -87,7 +87,7 @@ export const Services = () => {
             src="./office-cleaning.png"
             width={400}
             height={100}
-            className="rounded-full border-blue-600 border-4"
+            className="shadow-lg rounded-md"
           />
         </div>
         <div>
@@ -116,7 +116,7 @@ export const Services = () => {
             src="./residential-cleaning.png"
             width={400}
             height={100}
-            className="rounded-full border-blue-600 border-4"
+            className="shadow-lg rounded-md"
           />
         </div>
       </div>

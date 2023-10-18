@@ -5,7 +5,7 @@ import { SideBar } from "./SideBar";
 export const Header = () => {
   return (
     <div>
-      <div className="bg-[#1479bc] text-white justify-between fixed w-full md:flex">
+      <div className="bg-[#1479bc] text-white justify-between fixed w-full md:flex h-[70px] md:h-auto">
         <div className="md:flex hidden">
           <img src="/logo.png" width={"15%"} className="p-5" />
           <div className="flex gap-4 text-2xl items-center ">
