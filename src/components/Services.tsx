@@ -24,18 +24,20 @@ export const Services = () => {
       </div>
       <div className="md:grid md:grid-cols-2 justify-center items my-10 items-center gap-3 flex flex-col-reverse">
         <div>
-          <h1>Superficial Cleaning</h1>
+          <h1>Laundry</h1>
           <p>
-            To keep your space looking presentable, we offer a effective surface
-            cleaning. This option is perfect for maintaining a regular cleaning,
-            covering areas of common use and easy access. Our dedicated team
-            carries out surface cleaning in a quickly and efficiently, leaving
-            your environment looking fresh.
+            We offer a wide range of cleaning services, including washing
+            clothes, bed linen and towels, as well as specialty items such as
+            sofas and rugs. We maintain the same high standard of quality that
+            you have come to expect from our home cleaning services. Even though
+            laundry is not our main focus, you can trust our dedication and
+            quality in taking care of your clothes and personal items, allowing
+            you to enjoy life to the fullest.
           </p>
         </div>
         <div className="flex justify-center my-5">
           <img
-            src="./surface-cleaning.png"
+            src="./laundry.png"
             width={400}
             height={100}
             className="shadow-lg rounded-md"
@@ -52,7 +54,7 @@ export const Services = () => {
           />
         </div>
         <div>
-          <h1>Entry/Exit Cleaning</h1>
+          <h1>Move in - move out</h1>
           <p>
             Residential moves can be stressful, and cleaning should not be be a
             concern. Offers deep cleaning services for both who is moving to a
