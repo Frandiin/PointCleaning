@@ -13,7 +13,7 @@ export const Header: FC<HeaderProps> = ({ setShow, show }) => {
 
   return (
     <div className="bg-white justify-between  w-full md:flex h-[70px] md:min-h-[120px] fixed z-[1000]  ">
-      <div className="md:hidden">
+      <div className="md:hidden flex justify-between">
         <IconButton
           onClick={() => {
             setShow(!show);
@@ -21,14 +21,17 @@ export const Header: FC<HeaderProps> = ({ setShow, show }) => {
         >
           {show ? (
             <Close
-              sx={{ color: "#1479bc", fontSize: "45px", marginTop: "5px" }}
+              sx={{ color: "#1479bc", fontSize: "40px", marginTop: "5px" }}
             />
           ) : (
             <Menu
-              sx={{ color: "#1479bc", fontSize: "45px", marginTop: "5px" }}
+              sx={{ color: "#1479bc", fontSize: "40px", marginTop: "5px" }}
             />
           )}
         </IconButton>
+        <div className="flex justify-center mr-[155px]">
+          <img src="./logo.svg" width={60} />
+        </div>
       </div>
 
       <div className="md:flex hidden mx-[2%]">

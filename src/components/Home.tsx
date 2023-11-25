@@ -50,7 +50,7 @@ export const Home = () => {
   ];
   return (
     <div>
-      <div className="relative mt-10 w-full">
+      <div className="relative mt-20 w-full">
         <div>
           <div
             className={
