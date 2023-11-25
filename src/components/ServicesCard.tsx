@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Modal } from "./Modal";
 import { useModal } from "../hooks/use-modal";
 import PhoneIcon from "@mui/icons-material/Phone";
