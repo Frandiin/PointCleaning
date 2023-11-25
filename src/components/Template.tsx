@@ -1,10 +1,12 @@
 import { Outlet, useLocation } from "react-router-dom";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Header } from "./Header";
 import Footer from "./Footer";
+import { SideBar } from "./SideBar";
 
 export const Template = () => {
+  const [show, setShow] = useState(false);
   const location = useLocation();
   useEffect(() => {
     if (location.hash) {
@@ -16,8 +18,10 @@ export const Template = () => {
 
   return (
     <div className="overflow-hidden">
-      <Header />
-      <main id="main" className="mt-[80px]  overflow-auto ">
+      <Header show={show} setShow={setShow} />
+      <SideBar show={show} setShow={setShow} />
+
+      <main id="main" className="md:mt-[90px] mt-[50px]  ">
         <Outlet />
         <Footer />
       </main>

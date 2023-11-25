@@ -4,7 +4,6 @@ import { Template } from "./components/Template";
 import { About } from "./components/About";
 import { NotFound } from "./components/NotFound";
 import { Home } from "./components/Home";
-import { Services } from "./components/Services";
 
 export const Router = () => {
   return (
@@ -13,7 +12,7 @@ export const Router = () => {
         <Routes>
           <Route element={<Template />}>
             <Route element={<Home />} path="/" />
-            <Route element={<Services />} path="/services" />
+
             <Route element={<About />} path="/about" />
           </Route>
           <Route element={<NotFound />} path="*" />

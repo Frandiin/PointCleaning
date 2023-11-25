@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Roboto: ["Roboto"],
+        Poppins: ["Poppins"],
       },
     },
   },
@@ -16,11 +16,11 @@ export default {
         "h1,h2": {
           fontFamily: "Poppins",
           fontWeight: "bold",
-          textTransform: "uppercase",
+
           fontSize: "30px",
           color: "#1479bc",
         },
-        p: { fontFamily: "Roboto", fontSize: "24px" },
+        p: { fontFamily: "Poppins", fontSize: "24px" },
         a: { fontWeight: "bold", color: "white" },
 
         "*::-webkit-scrollbar": { width: "6px", height: "6px" },

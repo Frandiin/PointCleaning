@@ -32,7 +32,7 @@ export const Footer = () => {
             <EmailIcon sx={{ color: "white" }} />
             pointcleaning@outlook.com
           </a>
-          <a href="/">
+          <a>
             <LocationOnIcon sx={{ color: "white" }} /> San Diego, Ca
           </a>
         </div>
@@ -99,19 +99,21 @@ export const Footer = () => {
               type="submit"
               onClick={handleSubmit}
             >
-              Enviar
+              Submit
             </Button>
           </form>
         </div>
         <div className="flex flex-col text-white gap-3 items-center text-start uppercase p-4 mt-6">
           <ul>
             <h1 className="text-center text-[18px] text-white">Services</h1>
-            <li>specialized cleaning</li>
-            <li>season house</li>
-            <li>office </li>
-            <li>post construction</li>
-            <li>residential</li>
-            <li>move in - move out</li>
+            <li>Deep Cleaning</li>
+            <li>Laundry</li>
+            <li>Vacation Rental </li>
+            <li>Office Cleaning</li>
+            <li>Residential Cleaning</li>
+            <li>Move in - move out</li>
+            <li>Sofa cleaning</li>
+            <li>Post construction</li>
           </ul>
         </div>
       </footer>

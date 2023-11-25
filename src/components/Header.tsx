@@ -1,52 +1,58 @@
-import { Button } from "@mui/material";
-import PhoneIcon from "@mui/icons-material/Phone";
-import { SideBar } from "./SideBar";
+import { IconButton } from "@mui/material";
+import { Close, Menu } from "@mui/icons-material";
+import type { Dispatch, SetStateAction, FC } from "react";
+interface HeaderProps {
+  show: boolean;
+  setShow: Dispatch<SetStateAction<boolean>>;
+}
 
-export const Header = () => {
+export const Header: FC<HeaderProps> = ({ setShow, show }) => {
+  const lastPath =
+    window.location.href.split("/")[window.location.href.split("/").length - 1];
+  console.log(lastPath);
+
   return (
-    <div>
-      <div className="bg-[#1479bc] text-white justify-between fixed w-full md:flex h-[70px] md:min-h-[120px]">
-        <div className="md:flex hidden">
-          <div className="md:w-[130px]">
-            <img src="/logo.png" width={"100%"} className="p-5" />
-          </div>
+    <div className="bg-white justify-between  w-full md:flex h-[70px] md:min-h-[120px] fixed z-[1000]  ">
+      <div className="md:hidden">
+        <IconButton
+          onClick={() => {
+            setShow(!show);
+          }}
+        >
+          {show ? (
+            <Close
+              sx={{ color: "#1479bc", fontSize: "45px", marginTop: "5px" }}
+            />
+          ) : (
+            <Menu
+              sx={{ color: "#1479bc", fontSize: "45px", marginTop: "5px" }}
+            />
+          )}
+        </IconButton>
+      </div>
 
-          <div className="flex gap-4 text-2xl items-center ">
-            <a
-              href="/"
-              className="cursor-pointer hover:border-b-4 hover:border-white "
-            >
-              Home
-            </a>
-            <a
-              href="/about"
-              className="cursor-pointer hover:border-b-4 hover:border-white "
-            >
-              About
-            </a>
-
-            <a
-              href="/services"
-              className="cursor-pointer hover:border-b-4 hover:border-white "
-            >
-              Service
-            </a>
-          </div>
+      <div className="md:flex hidden mx-[2%]">
+        <div className="md:w-[130px]">
+          <img src="/logo.svg" width={"100%"} className="mt-[-10px]" />
         </div>
-        <div className="md:hidden">
-          <SideBar />
-        </div>
-        <div className="md:flex justify-center items-center p-3 hidden">
-          <Button variant="contained" color="primary">
-            <a
-              href="https://wa.link/bd66pl"
-              target="_blank"
-              className="text-[#1479bc]"
-            >
-              <PhoneIcon sx={{ color: "#1479bc" }} /> +1 (857) 263-1670
-            </a>
-          </Button>
-        </div>
+      </div>
+      <div className="md:flex gap-20 text-2xl items-center  hidden md:justify-center w-full">
+        <a
+          href="/"
+          className={`cursor-pointer  text-[#1A77BA] hover:underline underline-offset-2 ${
+            lastPath === "" ? "underline" : ""
+          }`}
+        >
+          Home
+        </a>
+        <a
+          href="/about"
+          className={`cursor-pointer  text-[#1A77BA] hover:underline underline-offset-2 ${
+            lastPath === "about" ? "underline" : ""
+          }`}
+        >
+          About
+        </a>
       </div>
     </div>
   );
