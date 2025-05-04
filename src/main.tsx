@@ -10,7 +10,15 @@ const theme = createTheme({
     secondary: { main: "#1479bc" },
   },
   components: {
-    MuiButton: { defaultProps: { variant: "contained" } },
+    MuiButton: {
+      defaultProps: {
+        style: {
+          borderRadius: 6,
+        },
+
+        variant: "contained",
+      },
+    },
   },
 });
 

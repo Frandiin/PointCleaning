@@ -1,124 +1,142 @@
-import { Button, TextField } from "@mui/material";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import EmailIcon from "@mui/icons-material/Email";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { useState } from "react";
-import { toast } from "react-toastify";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import logo from "../assets/point.png";
+import { createWhatsAppLink } from "../utils/whatsapp";
 
-import "react-toastify/dist/ReactToastify.css";
+const footerServices = [
+  {
+    text: "Residential Cleaning",
+    message:
+      "Hello! I'm interested in residential cleaning services. Could you provide more information?",
+  },
+  {
+    text: "Commercial Cleaning",
+    message:
+      "Hello! I need commercial cleaning services for my business. Could you send me a quote?",
+  },
+  {
+    text: "Industrial Cleaning",
+    message:
+      "Hello! I need industrial cleaning services. Could you provide more information?",
+  },
+  {
+    text: "Post-Construction Cleaning",
+    message:
+      "Hello! I need post-construction cleaning services. What are your rates?",
+  },
+  {
+    text: "Warehouse Cleaning",
+    message:
+      "Hello! I'm looking for warehouse cleaning services. Could you provide details?",
+  },
+  {
+    text: "Office Cleaning",
+    message: "Hello! I need office cleaning services. What are your packages?",
+  },
+  {
+    text: "Sofa Cleaning",
+    message:
+      "Hello! I'm interested in sofa cleaning services. Could you tell me more?",
+  },
+  {
+    text: "Condominium Cleaning",
+    message:
+      "Hello! I'm interested in condominium cleaning services. Could you provide more information?",
+  },
+];
 
 export const Footer = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = () => {
-    if (email && message) {
-      toast.success("Mensagem enviada!");
-      setEmail("");
-      setMessage("");
-    } else {
-      toast.error("Por favor, preencha todos os campos.");
-    }
-  };
   return (
-    <div>
-      <footer className="mt-10 md:grid md:grid-cols-3 text-center bg-[#1479bc] gap-3 p-3 pb-20">
-        <div className="flex flex-col gap-4 text-white items-start mx-2 p-4 mt-6">
-          <a href="https://www.instagram.com/point.cleaning/" target="_blank">
-            <InstagramIcon sx={{ color: "white" }} />
-            Point Cleaning
-          </a>
-          <a href="mailto:pointcleaning@outlook.com" target="_blank">
-            <EmailIcon sx={{ color: "white" }} />
-            pointcleaning@outlook.com
-          </a>
-          <a>
-            <LocationOnIcon sx={{ color: "white" }} /> San Diego, Ca
-          </a>
-        </div>
-        <div className=" mt-6">
-          <h1 className="text-white">Contact</h1>
-          <form
-            action="https://api.staticforms.xyz/submit"
-            method="post"
-            className="flex flex-col gap-2"
-          >
-            <input
-              type="hidden"
-              name="accessKey"
-              value="9fe64b40-5989-46e4-abca-5968030fee9b"
-            ></input>
-            <input
-              type="hidden"
-              name="redirectTo"
-              value="http://localhost:5173/"
-            />
+    <footer className="bg-[#1A2027] text-white py-8 mt-auto">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <div className="mb-6">
+              <img
+                src={logo}
+                alt="Point Cleaning Logo"
+                className="h-20 bg-transparent"
+              />
+            </div>
+            <p className="text-gray-400 mb-6">
+              Professional cleaning services with excellence and quality.
+              Transforming environments with dedication and attention to detail.
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="https://www.instagram.com/point.cleaning?igsh=bzhxbnlmOTM1M2w5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#E4405F] transition-colors"
+              >
+                <FaInstagram className="w-6 h-6" />
+              </a>
+              <a
+                href={createWhatsAppLink(
+                  "Hello! I would like more information about your services."
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#25D366] transition-colors"
+              >
+                <FaWhatsapp className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
 
-            <TextField
-              InputLabelProps={{
-                style: { color: "white" }, // Cor do label
-              }}
-              InputProps={{
-                style: {
-                  borderColor: "white", // Cor da borda
-                  color: "white",
-                },
-              }}
-              label="Email"
-              type="email"
-              required
-              name="email"
-              variant="outlined"
-              placeholder="Email"
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-              sx={{ color: "white" }}
-            />
-            <TextField
-              InputLabelProps={{
-                style: { color: "white" }, // Cor do label
-              }}
-              InputProps={{
-                style: {
-                  borderColor: "white", // Cor da borda
-                  color: "white",
-                },
-              }}
-              name="$message"
-              label="Message"
-              multiline
-              minRows={3}
-              maxRows={3}
-              placeholder="message"
-              required
-            />
-            <Button
-              variant="contained"
-              sx={{ color: "#1479bc" }}
-              type="submit"
-              onClick={handleSubmit}
-            >
-              Submit
-            </Button>
-          </form>
+          <div>
+            <h6 className="text-lg font-bold mb-6">Contact</h6>
+            <div className="flex flex-col gap-4">
+              <p className="text-gray-400">
+                Morena Blvd, 2311
+                <br />
+                San Diego, CA
+              </p>
+              <a
+                href={createWhatsAppLink(
+                  "Hello! I would like to speak with someone."
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Phone: +1 (857) 263-1670
+              </a>
+              <a
+                href="mailto:pointcleaning@outlook.com"
+                className="text-gray-400"
+              >
+                Email: pointcleaning@outlook.com
+              </a>
+              <p className="text-gray-400">
+                Hours: Mon-Fri: 8am-6pm
+                <br />
+                Sat: 8am-12pm
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h6 className="text-lg font-bold mb-6">Services</h6>
+            <div className="flex flex-col gap-4">
+              {footerServices.map((service) => (
+                <a
+                  key={service.text}
+                  href={createWhatsAppLink(service.message)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {service.text}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col text-white gap-3 items-center text-start uppercase p-4 mt-6">
-          <ul>
-            <h1 className="text-center text-[18px] text-white">Services</h1>
-            <li>Deep Cleaning</li>
-            <li>Laundry</li>
-            <li>Vacation Rental </li>
-            <li>Office Cleaning</li>
-            <li>Residential Cleaning</li>
-            <li>Move in - move out</li>
-            <li>Sofa cleaning</li>
-            <li>Post construction</li>
-          </ul>
+
+        <div className="mt-8 pt-6 border-t border-gray-800 text-center text-gray-500">
+          <p>{new Date().getFullYear()} Point Cleaning. All rights reserved.</p>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
-
-export default Footer;

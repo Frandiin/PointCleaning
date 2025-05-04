@@ -1,23 +1,19 @@
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Suspense } from "react";
-import { Template } from "./components/Template";
-import { About } from "./components/About";
-import { NotFound } from "./components/NotFound";
-import { Home } from "./components/Home";
+import { Home } from "./pages/Home";
+import { Services } from "./pages/Services";
+import { About } from "./pages/About";
+import { NotFound } from "./pages/NotFound";
 
-export const Router = () => {
+export function Router() {
   return (
-    <BrowserRouter>
-      <Suspense fallback={<Outlet />}>
-        <Routes>
-          <Route element={<Template />}>
-            <Route element={<Home />} path="/" />
-
-            <Route element={<About />} path="/about" />
-          </Route>
-          <Route element={<NotFound />} path="*" />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
-};
+}
