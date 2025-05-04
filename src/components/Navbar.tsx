@@ -1,27 +1,14 @@
-import { useState } from 'react';
-import {
-  AppBar,
-  Box,
-  Toolbar,
-  IconButton,
-  Typography,
-  Container,
-  Button,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
-import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { MdCleaningServices } from "react-icons/md";
 
 const pages = [
-  { title: 'Home', path: '/' },
-  { title: 'Services', path: '/services' },
-  { title: 'About', path: '/about' },
-  { title: 'Contact', path: '/contact' },
-  { title: 'Feedback', path: '/feedback' },
+  { title: "Home", path: "/" },
+  { title: "Services", path: "/services" },
+  { title: "About", path: "/about" },
+  { title: "Contact", path: "/contact" },
+  { title: "Feedback", path: "/feedback" },
 ];
 
 export const Navbar = () => {
@@ -29,119 +16,75 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', boxShadow: 'none' }}>
-      <Container maxWidth="lg">
-        <Toolbar disableGutters>
+    <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
           {/* Desktop Logo */}
-          <CleaningServicesIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: '#1479bc' }} />
-          <Typography
-            variant="h6"
-            noWrap
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontWeight: 700,
-              color: '#1479bc',
-              textDecoration: 'none',
-              cursor: 'pointer',
-            }}
-            onClick={() => navigate('/')}
-          >
-            Point Cleaning
-          </Typography>
+          <div className="hidden md:flex items-center">
+            <MdCleaningServices className="text-[#1479bc] text-2xl mr-2" />
+            <span
+              className="text-[#1479bc] font-bold text-xl cursor-pointer"
+              onClick={() => navigate("/")}
+            >
+              Point Cleaning
+            </span>
+          </div>
 
-          {/* Mobile Menu */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="menu"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={() => setMobileMenuOpen(true)}
-              color="inherit"
-              sx={{ color: '#1479bc' }}
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-[#1479bc] p-2"
             >
-              <MenuIcon />
-            </IconButton>
-            <Drawer
-              anchor="left"
-              open={mobileMenuOpen}
-              onClose={() => setMobileMenuOpen(false)}
-            >
-              <Box sx={{ width: 250 }} role="presentation">
-                <List>
-                  {pages.map((page) => (
-                    <ListItem 
-                      key={page.title} 
-                      onClick={() => {
-                        navigate(page.path);
-                        setMobileMenuOpen(false);
-                      }}
-                      sx={{ 
-                        cursor: 'pointer',
-                        '&:hover': {
-                          backgroundColor: 'rgba(20, 121, 188, 0.1)',
-                        },
-                      }}
-                    >
-                      <ListItemText 
-                        primary={page.title}
-                        sx={{ 
-                          color: '#1479bc',
-                          '.MuiTypography-root': {
-                            fontWeight: 500,
-                          },
-                        }} 
-                      />
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            </Drawer>
-          </Box>
+              {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
 
           {/* Mobile Logo */}
-          <CleaningServicesIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, color: '#1479bc' }} />
-          <Typography
-            variant="h6"
-            noWrap
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontWeight: 700,
-              color: '#1479bc',
-              textDecoration: 'none',
-              cursor: 'pointer',
-            }}
-            onClick={() => navigate('/')}
-          >
-            Point Cleaning
-          </Typography>
+          <div className="md:hidden flex items-center">
+            <MdCleaningServices className="text-[#1479bc] text-2xl mr-2" />
+            <span
+              className="text-[#1479bc] font-bold text-xl cursor-pointer"
+              onClick={() => navigate("/")}
+            >
+              Point Cleaning
+            </span>
+          </div>
 
           {/* Desktop Menu */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
+          <div className="hidden md:flex items-center space-x-4">
             {pages.map((page) => (
-              <Button
+              <button
                 key={page.title}
                 onClick={() => navigate(page.path)}
-                sx={{
-                  my: 2,
-                  mx: 1,
-                  color: '#1479bc',
-                  display: 'block',
-                  fontWeight: 500,
-                  '&:hover': {
-                    backgroundColor: 'rgba(20, 121, 188, 0.1)',
-                  },
-                }}
+                className="text-[#1479bc] font-medium px-3 py-2 rounded-md hover:bg-[#1479bc]/10 transition-colors"
               >
                 {page.title}
-              </Button>
+              </button>
             ))}
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            {pages.map((page) => (
+              <button
+                key={page.title}
+                onClick={() => {
+                  navigate(page.path);
+                  setMobileMenuOpen(false);
+                }}
+                className="text-[#1479bc] block w-full text-left px-3 py-2 rounded-md hover:bg-[#1479bc]/10 transition-colors"
+              >
+                {page.title}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </nav>
   );
 };

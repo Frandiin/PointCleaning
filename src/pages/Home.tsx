@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import { HeroSection } from "../components/HeroSection";
 import { ServicesSection } from "../components/ServicesSection";
 import { BenefitsSection } from "../components/BenefitsSection";
@@ -12,18 +11,18 @@ import Branch from "../components/Branch";
 export function Home() {
   return (
     <FeedbackProvider>
-      <Box sx={{ minHeight: "100vh" }}>
+      <div className="100vh">
         <HeroSection />
         <ServicesSection />
         <BenefitsSection />
         <MethodologySection />
         <TestimonialsSection />
-        <Box sx={{ py: 8 }}>
+        <div className="p-8">
           <FeedbackForm />
-        </Box>
+        </div>
         <Branch />
         <CallToActionSection />
-      </Box>
+      </div>
     </FeedbackProvider>
   );
 }
