@@ -3,31 +3,35 @@ import { useRef, useEffect } from "react";
 const brands = [
   {
     name: "Clorox",
-    logo: "public/clorox.png",
+    logo: "src/assets/clorox.png",
   },
   {
     name: "easy-off",
-    logo: "public/easy-off.png",
+    logo: "src/assets/easy-off.png",
   },
   {
     name: "Sprayway",
-    logo: "public/Sprayway.png",
+    logo: "src/assets/Sprayway.png",
   },
   {
     name: "Mrs. Meyer's Clean Day",
-    logo: "public/mrs-meyers.png",
+    logo: "src/assets/mrs-meyers.png",
   },
   {
     name: "Ecover",
-    logo: "public/ecover.png",
+    logo: "src/assets/ecover.png",
   },
   {
     name: "Simple Green",
-    logo: "public/simple-green.png",
+    logo: "src/assets/simple-green.png",
   },
   {
     name: "Fabuloso",
-    logo: "public/fabuloso.png",
+    logo: "src/assets/fabuloso.png",
+  },
+  {
+    name: "Ypê",
+    logo: "src/assets/ype.png",
   },
 ];
 
