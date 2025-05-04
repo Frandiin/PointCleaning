@@ -85,11 +85,7 @@ export const Footer = () => {
           <div>
             <h6 className="text-lg font-bold mb-6">Contact</h6>
             <div className="flex flex-col gap-4">
-              <p className="text-gray-400">
-                Morena Blvd, 2311
-                <br />
-                San Diego, CA
-              </p>
+              <p className="text-gray-400">San Diego, CA</p>
               <a
                 href={createWhatsAppLink(
                   "Hello! I would like to speak with someone."
@@ -101,10 +97,10 @@ export const Footer = () => {
                 Phone: +1 (857) 263-1670
               </a>
               <a
-                href="mailto:contact@pointcleaning.com"
+                href="mailto:pointcleaning@outlook.com"
                 className="text-gray-400"
               >
-                Email: contact@pointcleaning.com
+                Email: pointcleaning@outlook.com
               </a>
               <p className="text-gray-400">
                 Hours: Mon-Fri: 8am-6pm
