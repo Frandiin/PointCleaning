@@ -38,7 +38,7 @@ export function MethodologySection() {
           </div>
           <div>
             <img
-              src="/src/assets/image2.png"
+              src="/image2.png"
               alt="Cleaning Methodology"
               className="w-full h-auto rounded-lg shadow-lg"
             />

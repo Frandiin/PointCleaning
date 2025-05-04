@@ -1,7 +1,7 @@
 import { Link as RouterLink } from "react-router-dom";
 import type { Dispatch, SetStateAction, FC } from "react";
 import { createWhatsAppLink } from "../utils/whatsapp";
-import logo from "../assets/point_logo.svg";
+import logo from "/point_logo.svg";
 
 interface HeaderProps {
   show: boolean;

@@ -3,35 +3,35 @@ import { useRef, useEffect } from "react";
 const brands = [
   {
     name: "Clorox",
-    logo: "src/assets/clorox.png",
+    logo: "/clorox.png",
   },
   {
     name: "easy-off",
-    logo: "src/assets/easy-off.png",
+    logo: "/easy-off.png",
   },
   {
     name: "Sprayway",
-    logo: "src/assets/Sprayway.png",
+    logo: "/Sprayway.png",
   },
   {
     name: "Mrs. Meyer's Clean Day",
-    logo: "src/assets/mrs-meyers.png",
+    logo: "/mrs-meyers.png",
   },
   {
     name: "Ecover",
-    logo: "src/assets/ecover.png",
+    logo: "/ecover.png",
   },
   {
     name: "Simple Green",
-    logo: "src/assets/simple-green.png",
+    logo: "/simple-green.png",
   },
   {
     name: "Fabuloso",
-    logo: "src/assets/fabuloso.png",
+    logo: "/fabuloso.png",
   },
   {
     name: "Ypê",
-    logo: "src/assets/ype.png",
+    logo: "/ype.png",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function Branch() {
     let animationFrame: number;
     let start: number | null = null;
     let x = 0;
-    const speed = 0.5; // quanto maior, mais rápido
+    const speed = 0.5;
     const totalWidth = track.scrollWidth / 2;
 
     function animateScroll(timestamp: number) {

@@ -4,7 +4,7 @@ export function HeroSection() {
   return (
     <div className="relative py-10 md:py-15 text-white overflow-hidden">
       <img
-        src="/src/assets/home.png"
+        src="/home.png"
         alt="Professional Cleaning Services"
         className="absolute top-0 left-0 w-full h-full object-cover object-center z-[-2]"
         style={{

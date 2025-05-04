@@ -1,5 +1,4 @@
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
-import logo from "../assets/point.png";
 import { createWhatsAppLink } from "../utils/whatsapp";
 
 const footerServices = [
@@ -33,9 +32,9 @@ const footerServices = [
     message: "Hello! I need office cleaning services. What are your packages?",
   },
   {
-    text: "Sofa Cleaning",
+    text: "Specialized Cleaning",
     message:
-      "Hello! I'm interested in sofa cleaning services. Could you tell me more?",
+      "Hello! I'm interested in specialized cleaning services. Could you tell me more?",
   },
   {
     text: "Condominium Cleaning",
@@ -52,7 +51,7 @@ export const Footer = () => {
           <div>
             <div className="mb-6">
               <img
-                src={logo}
+                src="/point.png"
                 alt="Point Cleaning Logo"
                 className="h-20 bg-transparent"
               />
@@ -102,10 +101,10 @@ export const Footer = () => {
                 Phone: +1 (857) 263-1670
               </a>
               <a
-                href="mailto:pointcleaning@outlook.com"
+                href="mailto:contact@pointcleaning.com"
                 className="text-gray-400"
               >
-                Email: pointcleaning@outlook.com
+                Email: contact@pointcleaning.com
               </a>
               <p className="text-gray-400">
                 Hours: Mon-Fri: 8am-6pm
