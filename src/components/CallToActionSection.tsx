@@ -4,7 +4,7 @@ export function CallToActionSection() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 w-full">
       <div className="bg-[#1976D2] text-white text-center py-16 flex flex-col justify-center">
-        <h3 className="text-3xl md:text-4xl mb-6">
+        <h3 className="text-3xl md:text-4xl mb-6 text-white">
           Ready to Transform Your Space?
         </h3>
         <p className="text-xl mb-8 opacity-90">

@@ -4,7 +4,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
-
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -17,6 +17,7 @@ function App() {
         </div>
         <Footer />
       </div>
+      <Analytics />
     </BrowserRouter>
   );
 }
