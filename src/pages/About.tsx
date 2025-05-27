@@ -109,9 +109,9 @@ export function About() {
           <h2 className="text-h2 text-primary mb-12">Our Numbers</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { number: "1000+", label: "Satisfied Customers" },
-              { number: "5000+", label: "Services Provided" },
-              { number: "50+", label: "Qualified Professionals" },
+              { number: "100+", label: "Satisfied Customers" },
+              { number: "500+", label: "Services Provided" },
+              { number: "5", label: "Qualified Professionals" },
               { number: "3", label: "Years of Experience" },
             ].map((stat, index) => (
               <div key={index}>

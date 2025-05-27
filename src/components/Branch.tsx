@@ -30,8 +30,8 @@ const brands = [
     logo: "/fabuloso.png",
   },
   {
-    name: "Ypê",
-    logo: "/ype.png",
+    name: "Pink",
+    logo: "/pink.png",
   },
 ];
 
